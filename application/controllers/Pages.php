@@ -1,18 +1,14 @@
 <?php   
     class Pages extends CI_Controller{
-        public function view($page = 'home')
+        public function index()
         {
-                if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
-                {
-                        // Whoops, we don't have a page for that!
-                        
-                        show_404();
-                }
-        
-                $data['title'] = ucfirst($page); // Capitalize the first letter
-        
-                $this->load->view('templates/header', $data);
-                $this->load->view('pages/'.$page, $data);
-                $this->load->view('templates/footer', $data);
+                $data['title'] = "À propos";
+                $data['accueil'] = $this->model_info->get_accueil();
+                $data['apropos'] = $this->model_info->get_apropos();
+                
+                $this->load->view('templates/header');
+                $this->load->view('apropos/index',$data);
+                $this->load->view('accueil/index',$data);
+                $this->load->view('templates/footer');
         }
     }
