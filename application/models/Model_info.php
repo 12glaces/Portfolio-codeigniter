@@ -21,5 +21,12 @@ class Model_info extends CI_Model {
 
         }
 
+        public function get_experiences()
+        {
+                $query = $this->db->get('experiences');
+                return $query->result_array();
+
+        }
+
         
 }
