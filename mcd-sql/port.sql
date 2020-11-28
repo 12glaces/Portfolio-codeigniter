@@ -64,12 +64,12 @@ CREATE TABLE Ci_contact(
 # Table: Veille
 #------------------------------------------------------------
 
-CREATE TABLE Veille(
+CREATE TABLE Ci_veille(
         id_Veille Int  Auto_increment  NOT NULL ,
         nomVeille Varchar (250) NOT NULL ,
         lien      Varchar (250) NOT NULL ,
         texte     Varchar (250) NOT NULL ,
         date      Date NOT NULL
-	,CONSTRAINT Veille_PK PRIMARY KEY (id_Veille)
+	,CONSTRAINT Ci_veille_PK PRIMARY KEY (id_Veille)
 )ENGINE=InnoDB;
 
