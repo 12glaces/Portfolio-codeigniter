@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Portfolio</a>
+  <a class="navbar-brand" href="<?php echo base_url(); ?>">Portfolio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,13 +23,13 @@
         <a class="nav-link" href="<?php echo base_url(); ?>apropos">À propos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Experiences</a>
+        <a class="nav-link" href="<?php echo base_url(); ?>experiences">Experiences</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Veille</a>
+        <a class="nav-link" href="<?php echo base_url(); ?>veille">Veille</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="<?php echo base_url(); ?>contact">Contact</a>
       </li>
     </ul>
   </div>
