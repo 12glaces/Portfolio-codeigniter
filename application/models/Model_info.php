@@ -36,15 +36,17 @@ class Model_info extends CI_Model {
         
         public function get_contact()
         {
-                $query = $this->db->get('contact');
+                $query = $this->db->get('contact_page');
                 return $query->result_array();
 
         }
-        //------
-        public function set_contact($contact)
+        //------INSERT
+
+        public function set_contact($data)
         {
-                $query = $this->db->set('contact');
-                return $query->result_array();
+                
+                $this->db->insert('contact',$data);
+                return $this->db->insert_id();
 
         }
 
