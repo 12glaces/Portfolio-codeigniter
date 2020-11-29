@@ -1,4 +1,3 @@
-Abandoned
 ###################
 What is CodeIgniter
 ###################
