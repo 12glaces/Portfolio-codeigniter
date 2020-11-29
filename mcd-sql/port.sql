@@ -46,17 +46,17 @@ CREATE TABLE Ci_experiences(
 
 
 #------------------------------------------------------------
-# Table: Ci_contact
+# Table: Ci_contact_page
 #------------------------------------------------------------
 
-CREATE TABLE Ci_contact(
+CREATE TABLE Ci_contact_page(
         id_contact Int  Auto_increment  NOT NULL ,
         nom        Varchar (50) NOT NULL ,
         prenom     Varchar (50) NOT NULL ,
         adresse    Varchar (50) NOT NULL ,
         email      Varchar (50) NOT NULL ,
         texte      Varchar (250) NOT NULL
-	,CONSTRAINT Ci_contact_PK PRIMARY KEY (id_contact)
+	,CONSTRAINT Ci_contact_page_PK PRIMARY KEY (id_contact)
 )ENGINE=InnoDB;
 
 
@@ -70,6 +70,21 @@ CREATE TABLE Ci_veille(
         lien      Varchar (250) NOT NULL ,
         texte     Varchar (250) NOT NULL ,
         date      Date NOT NULL
-	,CONSTRAINT Ci_veille_PK PRIMARY KEY (id_Veille)
+	,CONSTRAINT Ci_veille PRIMARY KEY (id_Veille)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Ci_contact
+#------------------------------------------------------------
+
+CREATE TABLE Ci_contact(
+        id_contact Int  Auto_increment  NOT NULL ,
+        nom        Varchar (50) NOT NULL ,
+        prenom     Varchar (50) NOT NULL ,
+        email      Varchar (50) NOT NULL ,
+        objet      Varchar (2500) NOT NULL ,
+        texte      Varchar (2500) NOT NULL
+	,CONSTRAINT Ci_contact_PK PRIMARY KEY (id_contact)
 )ENGINE=InnoDB;
 

@@ -5,6 +5,7 @@ h1{
     text-decoration: underline pink;
 }
 
+
 .font{
     color: white;
     margin-top: 40px;
@@ -16,6 +17,6 @@ h1{
     width: 1000px;
 }
 body{
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../img/img.png) no-repeat center center fixed; 
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/img.png) no-repeat center center fixed; 
     background-size: cover; 
   }
