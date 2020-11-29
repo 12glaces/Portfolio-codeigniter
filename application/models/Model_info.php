@@ -42,12 +42,14 @@ class Model_info extends CI_Model {
         }
         //------INSERT
 
-        public function set_contact($data)
+        public function set_contact()
         {
-                
-                $this->db->insert('contact',$data);
-                return $this->db->insert_id();
-
+                $data = array(
+                        'nom'=> $this->input->post('nom'),
+                        'prenom'=> $this->input->post('prenom'),
+                        'email'=> $this->input->post('email')
+                );
+                return $this->db->insert('contact', $data);
         }
 
         

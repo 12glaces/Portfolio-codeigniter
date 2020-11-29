@@ -1,16 +1,16 @@
 <?php   
     class Contact extends CI_Controller{
     
-    // Just some weak as contstructer
+    // Just some weak ass contstructerererer
         public function __construct()
         {
-            /*call CodeIgniter's default Constructor*/
+            //Call CodeIgniter's default Constructor
             parent::__construct();
             
-            /*load database libray manually*/
+            //Load database libray manually
             $this->load->database();
             
-            /*load Model*/
+            //Load Model
             $this->load->model('model_info');
         }
 
@@ -19,29 +19,28 @@
         {       
             $data['title'] = "Contact";
             $data['contact'] = $this->model_info->get_contact();
-            
-            // Send data to view
-            $this->load->view('templates/header');
-            $this->load->view('contact/index',$data);
-            $this->load->view('templates/footer');
-        }
-
-    // Submit to database
-        public function savedata()
-        {
-            /*load registration view form*/
-            $this->load->view('insert');
-        
-            /*Check submit button */
-            if($this->input->post('save'))
+            // Verify if stupid person has entered things correctly
+            $this->form_validation->set_rules('nom','nom','required');
+            $this->form_validation->set_rules('prenom','prenom','required');
+            $this->form_validation->set_rules('email','email','required');
+            $this->form_validation->set_rules('objet','objet','required');
+            $this->form_validation->set_rules('message','message','required');
+            // Send to DB (dab bum)
+            if($this->form_validation->run() === TRUE)
             {
-                $data['prenom']=$this->input->post('prenom');
-                $data['nom']=$this->input->post('nom');
-                $data['email']=$this->input->post('email');
-
-                $this->model_info->set_contact($data);
-            
+            // Send data to view
+               $this->load->view('templates/header');
+               $this->load->view('contact/success');
+               $this->load->view('contact/index',$data);
+               $this->load->view('templates/footer');
+               $this->model_info->set_contact();
+            }else{
+                $this->load->view('templates/header');
+                $this->load->view('contact/index',$data);
+                $this->load->view('templates/footer');
+                
             }
+            
         }
-
     }
+    
