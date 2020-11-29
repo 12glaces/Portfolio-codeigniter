@@ -70,7 +70,7 @@ CREATE TABLE Ci_veille(
         lien      Varchar (250) NOT NULL ,
         texte     Varchar (250) NOT NULL ,
         date      Date NOT NULL
-	,CONSTRAINT Ci_veille PRIMARY KEY (id_Veille)
+	,CONSTRAINT Ci_veille_PK PRIMARY KEY (id_veille)
 )ENGINE=InnoDB;
 
 

@@ -5,7 +5,7 @@
 <?php echo form_open('contact/index');?>
   <div class="form-group">
     <label class="font">Objet</label>
-    <input type="text" class="form-control" name="objet" placeholder="Entrez nom" >
+    <input type="text" class="form-control" name="objet" placeholder="Entrez objet" >
   </div>
 
   <div class="form-group">

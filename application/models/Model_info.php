@@ -47,7 +47,9 @@ class Model_info extends CI_Model {
                 $data = array(
                         'nom'=> $this->input->post('nom'),
                         'prenom'=> $this->input->post('prenom'),
-                        'email'=> $this->input->post('email')
+                        'email'=> $this->input->post('email'),
+                        'objet'=> $this->input->post('objet'),
+                        'texte'=> $this->input->post('texte')
                 );
                 return $this->db->insert('contact', $data);
         }
