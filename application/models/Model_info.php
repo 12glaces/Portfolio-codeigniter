@@ -49,7 +49,7 @@ class Model_info extends CI_Model {
                         'prenom'=> $this->input->post('prenom'),
                         'email'=> $this->input->post('email'),
                         'objet'=> $this->input->post('objet'),
-                        'texte'=> $this->input->post('texte')
+                        'texte'=> $this->input->post('message')
                 );
                 return $this->db->insert('contact', $data);
         }
